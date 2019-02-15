@@ -1,0 +1,524 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+
+/* nav expandable */
+
+.container-fluid{
+	/* margin: 0px !important; */
+	padding: 0px !important;
+
+}
+* navigation bar*/
+nav
+{
+    background-color: black;
+}
+ul li
+{
+    list-style-type: none;
+   margin-top: 3%;
+    color: #f2f2f2;
+    color: Rgb(195,217,238) ;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+ul li a
+{
+    text-decoration: none;
+    color: Rgb(195,217,238) ;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #f2f2f2;
+}
+.nav>li>a:focus, .nav>li>a:hover 
+{
+    text-decoration: none;
+    background-color: transparent !important;
+   color: #549CE0;
+}
+
+.navbar-header button{
+background: transparent;
+border: 1px solid #fff;
+
+}
+
+/* toggle navbar */
+
+
+
+
+
+
+header{
+	background: black;
+}
+
+
+/* header main section */
+
+
+
+.main-navbar{
+
+	background: black;
+	width: 100%;
+	height: 80px;
+	padding: 5px;
+	
+	
+}
+
+
+.header-logo{
+
+	width: 110px;
+	height: 70px;
+	float: left;
+}
+
+.inline-box{
+	display: inline;
+
+}
+
+.search-text{
+	line-height: 0px;
+	margin: 0px 30px;
+
+}
+
+.inline-box i:hover{
+
+	color:orange;
+
+}
+.main-navbar p{
+	color: white;
+	line-height: 70px;
+	margin-left: 8%;
+	margin-right: 10px;
+
+	
+
+}
+
+
+
+.main-navbar ul{
+
+	
+	line-height: 70px;
+	float: right;
+
+	
+}
+
+
+.header-navigation li a{
+color: white;
+text-decoration: none;
+float: left;
+padding: 0px 10px;
+
+}
+.header-navigation li a:hover{
+	color: orange;
+	text-decoration: none;
+	}
+
+
+ .main-navbar ul li{
+
+	list-style-type: none;
+	float: left;
+	
+} 
+
+.login-button-header{
+
+	background: goldenrod;
+	color: white;
+	padding: 0px 10px;
+	border: none;
+}
+
+
+
+/* header ends here */
+
+
+/* CSS MAIN BODY CONTENT STARTS HERE */
+
+.about_us-content-bg{
+
+	background: url(image/about-us-background.png);
+	width: 100%;
+	min-height: 600px;
+	max-height: fit-content;
+	background-position: center center;
+	background-size: cover;
+}
+
+
+
+.heading-per-section{
+	font-family: Myriad Pro Regular;
+	text-align: center;
+	margin: 20px 10px !important;
+	
+
+}
+
+.watermark-logo{
+
+	width: 70px;
+	height: 60px;
+	float:  right;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	
+
+}
+
+
+.tileright-left{
+	background: silver;
+
+}
+.content-about-us p{
+
+	text-align: justify;
+	font-family:Myriad Pro Regular;
+	margin-bottom: 10px;
+
+
+}
+
+
+
+
+.content-best-dates{
+	
+	width: 100%;
+	height:500px;
+
+}
+
+.heading-per-section{
+	font-family: Myriad Pro Regular;
+	text-align: center;
+	margin: 10px;
+
+}
+.capalized{
+	text-transform: capitalize;
+}
+
+
+.content-fab-vander{
+	text-align: center;
+
+}
+
+/* .tile-left{
+	
+} */
+
+.share-btn{
+	
+	display: block;
+	background: magenta;
+	width: 100%;
+	position: absolute;
+	bottom: 10px;
+
+}
+
+.tile-size{
+
+	height: 424px;
+	width: 100%;
+
+}
+
+.tile-shadow
+{
+	box-shadow: 5px 10px 8px #888888;
+	
+}
+.zero-margin{
+	
+	padding: 0px;
+}
+
+
+.jan-bg{
+	background:url(image/janback.png);
+	background-size: cover;
+	background-position: center center;
+}
+
+
+.feb-bg{
+	background:url(image/feb.png);
+	background-size: cover;
+	background-position: center center;
+}
+
+.heading-all{
+	width: 100%;
+	height: 120px;
+	padding:30px 20%;
+	margin: 20px 0px;
+    
+		
+}
+.chekout-tag
+{
+	background: violet;
+}
+.heading-all h3{
+	
+	font-family: Myriad Pro Regular;
+	color: white;
+	text-align: center;
+		
+}
+.pritty-mandap{
+
+	background: magenta;
+}
+
+/* 
+.tile-right{
+
+	background: grey;
+}  */
+
+
+.mar-bg{
+
+	background:url(image/march.png);
+	background-size: cover;
+	background-position: center center;
+
+}
+
+.april-bg{
+
+	background:url(image/april.png);
+	background-size: cover;
+	background-position: center center;
+
+}
+
+.may-bg{
+
+	background:url(image/may.png);
+	background-size: cover;
+	background-position: center center;
+
+}
+
+.june-bg{
+	background:url(image/jun.png);
+	background-size: cover;
+	background-position: center left;
+
+}
+.july-bg{
+
+	background:url(image/jun.png);
+	background-size: cover;
+	background-position: center center;
+
+}
+
+.tileleft-right table{
+
+	width: 100%;
+	font-family: poppins;
+
+}
+
+
+
+.nov-bg{
+	
+	background:url(image/nov.png);
+	background-size: cover;
+	background-position: center left;
+}
+
+.dec-bg{
+
+	background:url(image/dec.png);
+	background-size: cover;
+	background-position: center center;
+
+}
+
+.content-fab-vander{
+
+	
+	
+	width: 100%;
+	height:500px;
+
+}
+
+.content-holi-themed-wedding{
+	
+	width: 100%;
+	height:500px;
+
+}
+.content-pretty-mandap{
+
+	
+	width: 100%;
+	height:500px;	
+}
+
+.content-makeup{
+
+	
+	width: 100%;
+	height:500px;	
+
+}
+
+
+/* MAIN BODY CONTENTS ENDS HERE */
+
+
+
+
+
+
+
+
+/* footer section css */
+
+
+footer{
+	
+	 background-color: black;
+	 margin: 0px;
+	 width: 100%;
+	 height: auto;
+	}
+ 
+ .col-sm-4{
+	 padding: 5% 10%; 
+	}
+
+ .col-sm-3{
+	 padding: 5% 3%;
+	}
+ 
+ .col-sm-5{
+   
+	 padding: 5% 10%;
+	 }
+ 
+ 
+ 
+ 
+ 
+ .link-group-febwedding{
+	 margin-top: 10px;
+	}
+
+
+ .main-link-footer a
+ {
+ 
+	 text-decoration: none;
+	 color: white;
+	 font-size: 1.3em;
+	 font-weight: bold;
+ }
+ 
+ .main-link-footer a:hover{
+	 text-decoration: none;
+	 color: orange;
+ }
+ .sublink-footer a{
+	 text-decoration: none;
+	 color: grey;
+	 font-size: .9em;
+	 margin-top: 5px;
+	 
+ }
+ .sublink-footer a:hover{
+	text-decoration: none;
+	color: orange;
+}
+  
+ 
+ 
+ .tage-base-line{
+	 color: grey;
+	 padding-left: 20px;
+	 font-weight: 500
+ 
+ }
+ 
+ 
+ 
+ .color-speci
+ {
+	 color: white;
+ }
+ 
+ 
+ .para-blog-alert
+ {
+	 color: white;
+	 text-align: justify;
+	 
+ }
+
+ form{
+
+	margin: 0px 80px 40px 0px;
+	
+
+ }
+ .form-get-blog input{
+ 
+	 width: 100%;
+	 text-indent: 5px;
+   
+ }
+ 
+ .fade-line{
+	 
+	 margin:10px auto;
+	 width:95%;
+	 height:1px; 
+	 color: beige;
+	 background-image:-webkit-linear-gradient(left,rgba(100,100,100,0),rgba(100,100,100,.85),rgba(100,100,100,0));
+	 background-image:-moz-linear-gradient(left,rgba(100,100,100,0),rgba(100,100,100,.85),rgba(100,100,100,0));
+	 background-image:-ms-linear-gradient(left,rgba(100,100,100,0),rgba(100,100,100,.85),rgba(100,100,100,0));
+	 background-image:-o-linear-gradient(left,rgba(100,100,100,0),rgba(100,100,100,.85),rgba(100,100,100,0))
+ }
+ 
+ 
+ .copyright-info{
+ 
+	 text-align: center;
+	 text-transform: capitalize;
+	 columns: grey !important;
+	
+ }
+
+
+
+
+/* footer ends */
+
