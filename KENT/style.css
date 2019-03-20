@@ -1,151 +1,402 @@
-.margin-zero{
-
-padding: 0px !important;
-margin: 0px !important;
-
+.margin-zero {
+    padding: 0px !important;
+    margin: 0px !important;
 }
 
-.kent-user{
+.slide1-caption {
+    position: absolute;
+    top: 0px;
+    padding-top: 0px;
+    margin-top: 0px;
+}
 
+.logo-space {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    width: 14px;
+    min-width: 60px;
+    max-width: 100px;
+    height: auto;
+}
+
+.caption-titles {
+    margin-top: 30%;
+    margin-left: 40%;
+}
+
+.caption-titles h3 {
+    font-size: 3vw;
+}
+
+.btn-book {
+    background-color:skyblue;
+        color: black;
+}
+
+.section-header h3 {
+    font-size: 3vw;
+    text-align:start;
+}
+.section-header h2 {
+    font-size: 3vw;
+    text-align:center;
+}
+
+
+.main-section-heading {
+    text-transform: uppercase;
+}
+
+.kent-user {
     max-width: 120px;
     height: 100px;
     border-radius: 50%;
-
-
 }
 
-.margin-div{
-
+.margin-div {
     margin: 5% 0%;
-
-
 }
 
-.img-section{
-
+.img-section {
     width: 200px;
     height: 200px;
     border-radius: 50%;
 }
 
-.section-icon{
-
-    font-size:2em;
+.section-icon {
+    font-size: 2em;
     padding: 10px;
 }
 
-.form-book-demo{
-
+.form-book-demo {
     width: 100%;
-    height: auto;
-
-    min-height: 400px;
+    height: 450px;
     background: url("image/home-visit.png");
+    background-size: cover;
+    background-position: center right;
 }
 
-.review-box{
-
+.review-box {
     max-width: 29vw;
-    background:blue;
+    background: blue;
     min-height: 200px;
-    border-radius: 10px;
+    border-radius: 5px;
     color: white;
     padding: 10px;
 }
-.div-shadow{
+
+.div-shadow {
     box-shadow: 10px 10px grey;
 }
-.right-review-box{
 
-margin-right: 0px;
-
-opacity: .4;
-border-top-right-radius: 0px;
-border-bottom-right-radius: 0px;
+.right-review-box {
+    margin-right: 0px;
+    opacity: .4;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 
-.left-review-box{
-
+.left-review-box {
     margin-left: 0px;
-    
     opacity: .4;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     padding-left: 0px;
+}
+
+.border-side {
+    border-right: 1px solid rgb(218, 218, 218);
+    border-left: 1px solid rgb(218, 218, 218);
+}
+
+footer {
+    background: black;
+    color: white;
+    width: 100%;
+    height: fit-content;
+    padding: 10px;
+}
+
+.footer-nav-link a {
+    text-decoration: none;
+    color: white;
+    vertical-align: middle;
+    line-height: 50px;
+}
+
+footer a::after {
+    content: " / ";
+}
+
+footer a:last-child::after {
+    content: "";
+}
+
+.footer-nav-link a:hover {
+    text-decoration: none;
+}
+
+.kent-products {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    padding: auto;
+}
+
+@media only screen and (max-width: 576px) {
+    .logo-space {
+        margin: 0px 40%;
+        padding: auto;
+        top: 0px;
+        margin-top: 0px;
+        width: 20px;
+        height: auto;
+        max-width: 30px;
     }
-    .heading-purity{
-        text-align: center
+    .caption-titles {
+        margin-top: 10%;
+        margin-left: 70%;
     }
-    .vl {
-        border-left: 6px solid black;
-        height: 500px;
+    .caption-titles h3 {
+        padding-bottom: 0px;
+        text-align: justify;
     }
-    /*--footer---*/
-    
-    @media (max-width:768px) {
-        .footer-menu {
-         padding: left 20px;
-        
-        }
-       
+    .btn-book {
+        font-weight: 100;
+        padding: 0px !important;
+        margin: 0px !important;
     }
-    /*forms css */
-    body{
-        margin: 0;
-        padding: 0;
-        font-family: sans-serif;
+    .main-section-heading {
+        font-size: 5vw;
     }
-    .formBox{
-        margin-top: 90px;
-        padding: 50px;
+    .kent-user {
+        width: 100px;
+        max-width: 100%;
+        height: 80px;
     }
-    .formBox  h1{
-        margin: 0;
-        padding: 0;
+    .margin-div {
+        margin: 5% 0%;
+    }
+    .img-section {
+        max-width: 30vw;
+        height: auto;
+        border-radius: 50%;
+    }
+    .lose-details h3 {
+        text-align: left;
+        font-size: 6vw;
+    }
+    .lose-details p {
+        text-align: justify;
+        font-size: 3vw;
+    }
+    .advantages h4 {
+        font-size: 5vw;
+    }
+    .section-icon {
+        font-size: 2em;
+        padding: 10px;
+    }
+    .form-book-demo {
+        width: 100%;
+        height: 450px;
+        background: url("image/home-visit.png");
+        background-size: cover;
+        background-position: center right;
+    }
+    .review-box {
+        max-width: 100%;
+        min-height: 180px;
+        background: blue;
+        border-radius: 5px;
+        color: white;
+        padding: 10px;
+    }
+    .hide-other {
+        display: none;
+    }
+    .right-review-box {
+        margin-right: 0px;
+        opacity: .7;
+        border-radius: 5px;
+    }
+    .left-review-box {
+        margin-left: 0px;
+        opacity: .4;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        padding-left: 0px;
+    }
+    .footer-nav-link a {
+        line-height: normal;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 767px) {
+    .caption-titles {
+        margin-top: 10%;
+        margin-left: 60%;
+    }
+    .caption-titles h3 {
+        font-size: 3vw;
+    }
+    .btn-book {
+        background-color: aquamarine;
+        color: black;
+    }
+    .section-header h3 {
+        font-size: 5vw;
         text-align: center;
-        margin-bottom: 50px;
+    }
+    .main-section-heading {
         text-transform: uppercase;
-        font-size: 48px;
     }
-    .inputBox{
-        position: relative;
-        box-sizing: border-box;
-        margin-bottom: 50px;
+    .kent-user {
+        max-width: 120px;
+        height: 100px;
+        border-radius: 50%;
     }
-    .inputBox .inputText{
-        position: absolute;
-        font-size: 24px;
+    .lose-details h3 {
+        text-align: left;
+        font-size: 5vw;
+    }
+    .lose-details p {
+        text-align: justify;
+        font-size: 3vw;
+    }
+    .advantages h4 {
+        font-size: 5vw;
+    }
+    .img-section {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+    .section-icon {
+        font-size: 2em;
+        padding: 10px;
+    }
+    .form-book-demo {
+        width: 100%;
+        height: 450px;
+        background: url("image/home-visit.png");
+        background-size: cover;
+        background-position: center right;
+    }
+    .review-box {
+        max-width: 100%;
+        min-height: 180px;
+        background: blue;
+        border-radius: 5px;
+        color: white;
+        padding: 10px;
+    }
+    .div-shadow {
+        box-shadow: 10px 10px grey;
+    }
+    .hide-other {
+        display: none;
+    }
+    .right-review-box {
+        margin-right: 0px;
+        opacity: .7;
+        border-radius: 5px;
+    }
+    .left-review-box {
+        margin-left: 0px;
+        opacity: .4;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        padding-left: 0px;
+    }
+    .border-side {
+        border-right: 1px solid rgb(218, 218, 218);
+        border-left: 1px solid rgb(218, 218, 218);
+    }
+    footer {
+        background: black;
+        color: white;
+        width: 100%;
+        height: fit-content;
+        padding: 10px;
+    }
+    .footer-nav-link a {
+        text-decoration: none;
+        color: white;
+        vertical-align: middle;
         line-height: 50px;
-        transition: .5s;
-        opacity: .5;
     }
-    .inputBox .input{
-        position: relative;
-        width: 100%;
-        height: 50px;
-        background: transparent;
-        border: none;
-        outline: none;
-        font-size: 24px;
-        border-bottom: 1px solid rgba(0,0,0,.5);
+    footer a::after {
+        content: " / ";
+    }
+    footer a:last-child::after {
+        content: "";
+    }
+    .footer-nav-link a:hover {
+        text-decoration: none;
+    }
+    .kent-products {
+        width: 200px;
+        height: 200px;
+    }
+}
+ /*forms css */
+ body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.formBox{
+    margin-top: 90px;
+    padding: 50px;
+}
+.formBox  h1{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    font-size: 48px;
+}
+.inputBox{
+    position: relative;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+}
+.inputBox .inputText{
+    position: absolute;
+    font-size: 24px;
+    line-height: 20px;
+    transition: .5s;
+    opacity: .5;
+}
+.inputBox .input{
+    position: relative;
+    width: 60%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    border-bottom: 1px solid rgba(0,0,0,.5);
     
-    }
-    .focus .inputText{
-        transform: translateY(-30px);
-        font-size: 18px;
-        opacity: 1;
-        color: #00bcd4;
-    
-    }
-    textarea{
-        height: 100px !important;
-    }
-    .button{
-        width: 100%;
-        height: 50px;
-        border: none;
-        outline: none;
-        background: #03A9F4;
-        color: #fff;
-    }
-    
+
+}
+.focus .inputText{
+   
+    font-size: 15px;
+    opacity: 1;
+    color: #00bcd4;
+
+}
+
+.button{
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    background: #03A9F4;
+    color: #fff;
+}
+
