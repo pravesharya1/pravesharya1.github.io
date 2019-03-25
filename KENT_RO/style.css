@@ -15,7 +15,7 @@
     top: 15px;
     left: 10px;
     width: 14px;
-    min-width: 60px;
+    min-width: 90px;
     max-width: 100px;
     height: auto;
 }
@@ -33,6 +33,15 @@
     background-color:skyblue;
         color: black;
 }
+.banner-actress{
+
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 150px;
+    left: -10px;
+}
+
 
 .section-header h3 {
     font-size: 3vw;
@@ -74,7 +83,7 @@
     height: 450px;
     background: url("image/home-visit.png");
     background-size: cover;
-    background-position: center right;
+    background-position: center left;
 }
 
 .review-box {
@@ -143,6 +152,86 @@ footer a:last-child::after {
     margin: 0 auto;
     padding: auto;
 }
+/*forms css */
+
+.formBox{
+    margin-top: 50px;
+    padding: 50px;
+}
+.inputBox{
+    position: relative;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+.inputBox .inputText{
+    position: absolute;
+    font-size: 24px;
+    line-height: 20px;
+    transition: .5s;
+    opacity: .5;
+}
+.inputBox .input{
+    position: relative;
+    width: 60%;
+    height: 50px;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    
+
+}
+.focus .inputText{
+   
+    font-size: 15px;
+    color: #00bcd4;
+    
+}
+
+.button{
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    background: #03A9F4;
+    color: #fff;
+}
+
+
+.form-area{
+
+    width: 50%;
+    height: 300px;
+    position: relative;
+    top: 40px;
+    left: 10%;
+}
+
+.form-group input{
+
+    width: 90%;
+    margin: 5px;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+
+    
+}
+.form-group input[type="checkbox"]{
+    margin-left: 10px;
+    }
+
+
+.right-form-input input{
+
+    margin-left: 0px;
+    
+}
+.left-form-input input{
+
+    margin-right: 0px;
+    
+} 
+
 
 @media only screen and (max-width: 576px) {
     .logo-space {
@@ -154,6 +243,9 @@ footer a:last-child::after {
         height: auto;
         max-width: 30px;
     }
+
+    
+
     .caption-titles {
         margin-top: 10%;
         margin-left: 70%;
@@ -198,13 +290,7 @@ footer a:last-child::after {
         font-size: 2em;
         padding: 10px;
     }
-    .form-book-demo {
-        width: 100%;
-        height: 450px;
-        background: url("image/home-visit.png");
-        background-size: cover;
-        background-position: center right;
-    }
+    
     .review-box {
         max-width: 100%;
         min-height: 180px;
@@ -231,7 +317,33 @@ footer a:last-child::after {
     .footer-nav-link a {
         line-height: normal;
     }
+  
+
+    
+.form-area{
+
+    width: 90%;
+    height: 300px;
+    position: relative;
+    top: 40px;
+    left: 10%;
 }
+
+.form-group input{
+
+    width: 100%;
+    margin: 3px;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+
+    
+}
+
+
+}
+
+
 
 @media (min-width: 577px) and (max-width: 767px) {
     .caption-titles {
@@ -277,13 +389,7 @@ footer a:last-child::after {
         font-size: 2em;
         padding: 10px;
     }
-    .form-book-demo {
-        width: 100%;
-        height: 450px;
-        background: url("image/home-visit.png");
-        background-size: cover;
-        background-position: center right;
-    }
+    
     .review-box {
         max-width: 100%;
         min-height: 180px;
@@ -340,63 +446,16 @@ footer a:last-child::after {
         width: 200px;
         height: 200px;
     }
-}
- /*forms css */
- body{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-}
-.formBox{
-    margin-top: 90px;
-    padding: 50px;
-}
-.formBox  h1{
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    margin-bottom: 50px;
-    text-transform: uppercase;
-    font-size: 48px;
-}
-.inputBox{
-    position: relative;
-    box-sizing: border-box;
-    margin-bottom: 50px;
-}
-.inputBox .inputText{
-    position: absolute;
-    font-size: 24px;
-    line-height: 20px;
-    transition: .5s;
-    opacity: .5;
-}
-.inputBox .input{
-    position: relative;
-    width: 60%;
-    height: 50px;
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: 24px;
-    border-bottom: 1px solid rgba(0,0,0,.5);
     
 
 }
-.focus .inputText{
-   
-    font-size: 15px;
-    opacity: 1;
-    color: #00bcd4;
 
+
+@media only screen and (max-width: 992px) {
+
+    .banner-actress{
+
+        display: none;
+
+    }
 }
-
-.button{
-    width: 100%;
-    height: 50px;
-    border: none;
-    outline: none;
-    background: #03A9F4;
-    color: #fff;
-}
-
