@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myforexeye- Stay Updated with Our Latest Insights</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Section */
+        .header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 40px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-intro {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Main Content */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .video-section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: #2d3748;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        /* Video Boxes */
+        .featured-video {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .featured-video:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .video-thumbnail {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .play-button {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .play-button:hover {
+            transform: scale(1.1);
+            background: white;
+        }
+
+        .play-button svg {
+            width: 24px;
+            height: 24px;
+            fill: #667eea;
+            margin-left: 3px;
+        }
+
+        .video-info {
+            padding: 20px;
+        }
+
+        .video-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #2d3748;
+        }
+
+        .video-description {
+            color: #718096;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .video-date {
+            font-size: 0.85rem;
+            color: #a0aec0;
+            margin-top: 10px;
+        }
+
+        /* Older Videos Grid */
+        .older-videos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .video-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .video-card .video-thumbnail {
+            height: 140px;
+        }
+
+        .video-card .play-button {
+            width: 45px;
+            height: 45px;
+        }
+
+        .video-card .play-button svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .video-card .video-info {
+            padding: 15px;
+        }
+
+        .video-card .video-title {
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+
+        .video-card .video-description {
+            font-size: 0.85rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Load More Button */
+        .load-more {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            margin: 0 auto;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .load-more:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .load-more:active {
+            transform: translateY(0);
+        }
+
+        /* Footer */
+        .footer {
+            background: rgba(45, 55, 72, 0.95);
+            backdrop-filter: blur(20px);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 15px;
+            color: #e2e8f0;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #a0aec0;
+            text-decoration: none;
+            line-height: 1.6;
+        }
+
+        .footer-section a:hover {
+            color: #667eea;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            color: #718096;
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid #e2e8f0;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .main-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.2rem;
+            }
+
+            .header-intro {
+                font-size: 1rem;
+            }
+
+            .video-section {
+                padding: 20px;
+            }
+
+            .older-videos {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .header {
+                padding: 30px 0;
+            }
+
+            .header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1>Myforexeye- Stay Updated with Our Latest Insights</h1>
+            <p class="header-intro">
+                Discover our comprehensive video content featuring daily forex market updates and premium research reports. 
+                Stay ahead of market trends with expert analysis and actionable insights delivered directly to you.
+            </p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="main-content">
+            <!-- Daily Forex Market Update Section -->
+            <div class="video-section">
+                <h2 class="section-title">Daily Forex Market Updates</h2>
+                
+                <!-- Featured Video -->
+                <div class="featured-video" id="dailyFeatured">
+                    <div class="video-thumbnail" onclick="playVideo('daily-featured')">
+                        <div class="play-button">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">EUR/USD Technical Analysis - Major Resistance Levels</h3>
+                        <p class="video-description">Comprehensive analysis of EUR/USD pair showing key resistance and support levels with trading opportunities for the upcoming session.</p>
+                        <p class="video-date">Today, 9:30 AM</p>
+                    </div>
+                </div>
+
+                <!-- Older Videos -->
+                <div class="older-videos" id="dailyOlderVideos">
+                    <div class="video-card">
+                        <div class="video-thumbnail" onclick="playVideo('daily-1')">
+                            <div class="play-button">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">GBP/JPY Breakout Strategy</h3>
+                            <p class="video-description">Analysis of GBP/JPY breakout patterns and entry strategies.</p>
+                            <p class="video-date">Yesterday, 2:15 PM</p>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-thumbnail" onclick="playVideo('daily-2')">
+                            <div class="play-button">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">USD/CAD Weekly Outlook</h3>
+                            <p class="video-description">Weekly forecast for USD/CAD with key economic events.</p>
+                            <p class="video-date">2 days ago, 10:00 AM</p>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-thumbnail" onclick="playVideo('daily-3')">
+                            <div class="play-button">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">AUD/USD Support Test</h3>
+                            <p class="video-description">Critical support level testing on AUD/USD pair analysis.</p>
+                            <p class="video-date">3 days ago, 8:45 AM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="loading" id="dailyLoading">
+                    <div class="spinner"></div>
+                    <p>Loading more videos...</p>
+                </div>
+
+                <button class="load-more" onclick="loadMoreVideos('daily')">Load More Daily Updates</button>
+            </div>
+
+            <!-- Premium Research Reports Section -->
+            <div class="video-section">
+                <h2 class="section-title">Premium Research Reports</h2>
+                
+                <!-- Featured Video -->
+                <div class="featured-video" id="premiumFeatured">
+                    <div class="video-thumbnail" onclick="playVideo('premium-featured')">
+                        <div class="play-button">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Q3 2025 Global Economic Outlook</h3>
+                        <p class="video-description">In-depth quarterly analysis covering global economic trends, central bank policies, and major currency forecasts for institutional traders.</p>
+                        <p class="video-date">Today, 7:00 AM</p>
+                    </div>
+                </div>
+
+                <!-- Older Videos -->
+                <div class="older-videos" id="premiumOlderVideos">
+                    <div class="video-card">
+                        <div class="video-thumbnail" onclick="playVideo('premium-1')">
+                            <div class="play-button">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">Fed Policy Impact Analysis</h3>
+                            <p class="video-description">Comprehensive Federal Reserve policy analysis and market implications.</p>
+                            <p class="video-date">1 week ago</p>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-thumbnail" onclick="playVideo('premium-2')">
+                            <div class="play-button">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">Emerging Markets Deep Dive</h3>
+                            <p class="video-description">Strategic analysis of emerging market currencies and opportunities.</p>
+                            <p class="video-date">2 weeks ago</p>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-thumbnail" onclick="playVideo('premium-3')">
+                            <div class="play-button">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">Cryptocurrency Market Analysis</h3>
+                            <p class="video-description">Institutional perspective on cryptocurrency market trends.</p>
+                            <p class="video-date">3 weeks ago</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="loading" id="premiumLoading">
+                    <div class="spinner"></div>
+                    <p>Loading more videos...</p>
+                </div>
+
+                <button class="load-more" onclick="loadMoreVideos('premium')">Load More Research Reports</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>Leading provider of forex market analysis and premium research reports for traders and financial institutions worldwide.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <p><a href="#terms">Terms of Service</a></p>
+                    <p><a href="#privacy">Privacy Policy</a></p>
+                    <p><a href="#contact">Contact Us</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: support@Myforexeye.com</p>
+                    <p>Phone: +919958360775</p>
+                    <p>Hours: 24/7 Market Coverage</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Myforexeye. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Sample video data for demonstration
+        const videoData = {
+            daily: [
+                { title: "NZD/USD Technical Setup", description: "New Zealand dollar technical analysis with trade setups.", date: "4 days ago, 11:30 AM" },
+                { title: "EUR/GBP Range Trading", description: "Range-bound trading strategies for EUR/GBP pair.", date: "5 days ago, 3:20 PM" },
+                { title: "USD/CHF Momentum Analysis", description: "Momentum indicators showing USD/CHF direction.", date: "6 days ago, 9:15 AM" },
+                { title: "CAD/JPY Volatility Report", description: "Volatility analysis and risk management for CAD/JPY.", date: "1 week ago, 4:45 PM" }
+            ],
+            premium: [
+                { title: "Central Bank Digital Currencies", description: "Impact of CBDCs on traditional forex markets and trading.", date: "1 month ago" },
+                { title: "Geopolitical Risk Assessment", description: "How geopolitical events affect currency market stability.", date: "6 weeks ago" },
+                { title: "Algorithmic Trading Trends", description: "Latest developments in automated forex trading systems.", date: "2 months ago" },
+                { title: "Institutional Flow Analysis", description: "Understanding institutional money flows in forex markets.", date: "3 months ago" }
+            ]
+        };
+
+        let loadedVideos = { daily: 0, premium: 0 };
+
+        function playVideo(videoId) {
+            alert(`Playing video: ${videoId}\n\nIn a real implementation, this would open a video player or redirect to the video URL.`);
+        }
+
+        function loadMoreVideos(type) {
+            const loadingEl = document.getElementById(`${type}Loading`);
+            const containerEl = document.getElementById(`${type}OlderVideos`);
+            
+            loadingEl.style.display = 'block';
+            
+            // Simulate loading delay
+            setTimeout(() => {
+                const startIndex = loadedVideos[type];
+                const endIndex = Math.min(startIndex + 2, videoData[type].length);
+                
+                for (let i = startIndex; i < endIndex; i++) {
+                    const video = videoData[type][i];
+                    const videoCard = createVideoCard(video, `${type}-${i + 4}`);
+                    containerEl.appendChild(videoCard);
+                }
+                
+                loadedVideos[type] = endIndex;
+                loadingEl.style.display = 'none';
+                
+                // Hide load more button if no more videos
+                if (loadedVideos[type] >= videoData[type].length) {
+                    const button = loadingEl.nextElementSibling;
+                    button.style.display = 'none';
+                }
+            }, 1500);
+        }
+
+        function createVideoCard(video, videoId) {
+            const card = document.createElement('div');
+            card.className = 'video-card';
+            card.innerHTML = `
+                <div class="video-thumbnail" onclick="playVideo('${videoId}')">
+                    <div class="play-button">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">${video.title}</h3>
+                    <p class="video-description">${video.description}</p>
+                    <p class="video-date">${video.date}</p>
+                </div>
+            `;
+            return card;
+        }
+
+        // Simulate automatic updates (in real implementation, this would be connected to a backend)
+        function simulateNewVideoUpdate() {
+            // This would typically be triggered by WebSocket or polling
+            console.log('Checking for new videos...');
+            
+            // In a real app, you would:
+            // 1. Make an API call to check for new videos
+            // 2. Update the featured video section if new content is available
+            // 3. Show a notification to users about new content
+        }
+
+        // Check for updates every 5 minutes (for demonstration)
+        setInterval(simulateNewVideoUpdate, 300000);
+
+        // Initial load
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Video Hub loaded successfully');
+        });
+    </script>
+</body>
+</html>
